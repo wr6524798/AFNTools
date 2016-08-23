@@ -15,6 +15,7 @@
 		1A445CC81D502D9200007C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A445CC61D502D9200007C7A /* LaunchScreen.storyboard */; };
 		1A445CD31D50304A00007C7A /* XCNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A445CD21D50304A00007C7A /* XCNetworkTools.m */; };
 		1A445CD61D5030CD00007C7A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A445CD51D5030CD00007C7A /* Reachability.m */; };
+		1AF791C81D6C278500F03D9B /* WRNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF791C71D6C278500F03D9B /* WRNetworkTools.swift */; };
 		CADD70146D83ACCC958C2481 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E7CA2E3B1096A0EBE6A3F8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		1A445CD21D50304A00007C7A /* XCNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNetworkTools.m; sourceTree = "<group>"; };
 		1A445CD41D5030CD00007C7A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		1A445CD51D5030CD00007C7A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1AF791C61D6C278400F03D9B /* AFNTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFNTools-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AF791C71D6C278500F03D9B /* WRNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNetworkTools.swift; sourceTree = "<group>"; };
 		62E7CA2E3B1096A0EBE6A3F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A63793DB4E64C7D5E4D19AC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		90993043632B01CD21D8D047 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		1A445CB71D502D9200007C7A /* AFNTools */ = {
 			isa = PBXGroup;
 			children = (
+				1AF791C71D6C278500F03D9B /* WRNetworkTools.swift */,
 				1A445CCF1D50301C00007C7A /* Network */,
 				1A445CBB1D502D9200007C7A /* AppDelegate.h */,
 				1A445CBC1D502D9200007C7A /* AppDelegate.m */,
@@ -82,6 +86,7 @@
 				1A445CC61D502D9200007C7A /* LaunchScreen.storyboard */,
 				1A445CC91D502D9200007C7A /* Info.plist */,
 				1A445CB81D502D9200007C7A /* Supporting Files */,
+				1AF791C61D6C278400F03D9B /* AFNTools-Bridging-Header.h */,
 			);
 			path = AFNTools;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				1A445CBD1D502D9200007C7A /* AppDelegate.m in Sources */,
 				1A445CBA1D502D9200007C7A /* main.m in Sources */,
 				1A445CD61D5030CD00007C7A /* Reachability.m in Sources */,
+				1AF791C81D6C278500F03D9B /* WRNetworkTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +367,13 @@
 			baseConfigurationReference = 90993043632B01CD21D8D047 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AFNTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wr.AFNTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AFNTools/AFNTools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -373,10 +382,12 @@
 			baseConfigurationReference = 7A63793DB4E64C7D5E4D19AC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AFNTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wr.AFNTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AFNTools/AFNTools-Bridging-Header.h";
 			};
 			name = Release;
 		};
